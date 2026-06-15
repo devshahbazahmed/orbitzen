@@ -39,11 +39,10 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
         <CardTitle className="text-3xl font-bold">
           Create your account
         </CardTitle>
-        <CardDescription>Start your 14-day free trial</CardDescription>
       </CardHeader>
       <CardContent className="space-y-6">
         <form className="space-y-6" onSubmit={(e) => handleSubmit(e)}>
-          <Button type="button" variant="outline" className="w-full">
+          <Button type="button" variant="outline" className="w-full py-6">
             <Image src="/google.svg" alt="Google" width={16} height={16} />
             Continue with Google
           </Button>
@@ -63,7 +62,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 htmlFor="name"
                 className="text-[11px] tracking-[0.2em] font-medium text-zinc-300"
               >
-                USER-NAME
+                Username
               </FieldLabel>
               <Input
                 id="username"
@@ -79,7 +78,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 htmlFor="email"
                 className="text-[11px] tracking-[0.2em] font-medium text-zinc-300"
               >
-                WORK EMAIL
+                Email
               </FieldLabel>
               <Input
                 id="email"
@@ -95,7 +94,7 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
                 htmlFor="password"
                 className="text-[11px] tracking-[0.2em] font-medium text-zinc-300"
               >
-                PASSWORD
+                Password
               </FieldLabel>
               <div className="relative">
                 <Input

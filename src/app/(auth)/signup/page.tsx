@@ -39,7 +39,7 @@ export default function SignupPage() {
 
         <h1 className="text-5xl font-semibold text-white">Orbitzen</h1>
 
-        <p className="mt-2 text-xs uppercase tracking-[0.35em] text-zinc-500">
+        <p className="mt-2 text-xs tracking-[0.35em] text-zinc-200">
           AI Scheduling. Smarter Workdays.
         </p>
       </div>
