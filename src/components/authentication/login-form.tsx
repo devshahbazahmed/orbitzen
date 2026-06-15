@@ -55,7 +55,7 @@ export function LoginForm({
   };
   return (
     <main className="relative min-h-screen bg-black overflow-hidden pt-10">
-      <div className="absolute -left-96 -top-64 h-[800px] w-[800px] rounded-full border border-blue-500/30" />
+      <div className="absolute -left-96 -top-64 h-200 w-200 rounded-full border border-blue-500/30" />
 
       <motion.div
         animate={{
@@ -66,7 +66,7 @@ export function LoginForm({
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute -left-96 -top-80 h-[900px] w-[900px] rounded-full border border-blue-500/30"
+        className="absolute -left-96 -top-80 h-225 w-225 rounded-full border border-blue-500/30"
       />
 
       <motion.div
@@ -78,7 +78,7 @@ export function LoginForm({
           repeat: Infinity,
           ease: 'linear',
         }}
-        className="absolute -right-96 bottom-[-300px] h-[900px] w-[900px] rounded-full border border-blue-500/20"
+        className="absolute -right-96 -bottom-75 h-225 w-225 rounded-full border border-blue-500/20"
       />
 
       <div className="flex flex-col items-center">
@@ -98,7 +98,7 @@ export function LoginForm({
         <div className={cn('flex flex-col gap-6', className)} {...props}>
           <Card
             {...props}
-            className="w-[480px] bg-white/[0.02] backdrop-blur-2xl border border-blue-500/20 shadow-[0_0_80px_rgba(37,99,235,0.15)]"
+            className="w-120 bg-white/2 backdrop-blur-2xl border border-blue-500/20 shadow-[0_0_80px_rgba(37,99,235,0.15)]"
           >
             <CardHeader className="text-center">
               <CardTitle className="text-3xl font-bold">

@@ -2,7 +2,7 @@
 
 import { authClient } from '@/lib/auth-client';
 import { useRouter } from 'next/navigation';
-import { Button } from './ui/button';
+import { Button } from '../ui/button';
 
 export function LogoutButton() {
   const router = useRouter();
