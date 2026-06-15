@@ -1,6 +1,6 @@
-import Header from '@/components/shared/Header';
-import NotFoundBody from '@/components/NotFoundBody';
-import Footer from '@/components/shared/Footer';
+import Header from '@/components/shared/shared-header';
+import NotFoundBody from '@/components/not-found-hero';
+import Footer from '@/components/shared/shared-footer';
 
 export default function NotFound() {
   return (

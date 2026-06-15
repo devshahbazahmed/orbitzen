@@ -1,6 +1,6 @@
 import { Bell, UserCircle } from 'lucide-react';
 import Link from 'next/link';
-import { Logo } from './Logo';
+import { Logo } from './shared-logo';
 
 export default function Header() {
   return (
@@ -10,17 +10,17 @@ export default function Header() {
           <Logo />
 
           <nav className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
-            <Link href="#" className="hover:text-white">
+            <Link href="/" className="hover:text-white">
               Product
             </Link>
-            <Link href="#" className="hover:text-white">
+            <Link href="/pricing" className="hover:text-white">
               Pricing
             </Link>
             <Link href="#" className="hover:text-white">
               Enterprise
             </Link>
             <Link href="#" className="hover:text-white">
-              Docs
+              Features
             </Link>
           </nav>
         </div>
