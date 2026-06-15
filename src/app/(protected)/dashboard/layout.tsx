@@ -1,15 +1,20 @@
-import { SignupForm } from '@/components/signup-form';
+import * as React from 'react';
 import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { auth } from '@/lib/auth';
 
-export default async function SignupPage() {
+export default async function DashboardLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const session = await auth.api.getSession({
     headers: await headers(),
   });
 
-  if (session) {
-    redirect('/dashboard');
+  if (!session) {
+    redirect('/login');
   }
-  return <SignupForm />;
+
+  return <>{children}</>;
 }
