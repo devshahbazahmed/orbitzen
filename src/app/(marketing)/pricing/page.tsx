@@ -4,10 +4,14 @@ import ComparisonTable from '@/components/pricing/comparison-table';
 import Header from '@/components/shared/shared-header';
 import Footer from '@/components/shared/shared-footer';
 import FadeIn from '@/components/shared/animations/fade-in';
+import AuroraBackground from '@/components/shared/backgrounds/aurora-background';
+import GridBackground from '@/components/shared/backgrounds/grid-background';
 
 export default function PricingPage() {
   return (
     <main className="min-h-screen bg-[#040814] text-white overflow-hidden">
+      <AuroraBackground />
+      <GridBackground />
       <Header />
 
       <div className="container mx-auto px-6">

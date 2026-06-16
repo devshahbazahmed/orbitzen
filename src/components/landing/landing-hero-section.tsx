@@ -2,7 +2,7 @@
 
 import { motion } from 'motion/react';
 import { Button } from '@/components/ui/button';
-import DashboardPreview from '@/components/landing/dashboard-preview';
+import DashboardPreview from '@/components/landing/landing-dashboard-preview';
 import { useState } from 'react';
 import Image from 'next/image';
 

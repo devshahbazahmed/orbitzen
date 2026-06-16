@@ -19,7 +19,7 @@ export default function Header() {
             <Link href="#" className="hover:text-[#2E62FF]">
               Enterprise
             </Link>
-            <Link href="#" className="hover:text-[#2E62FF]">
+            <Link href="/features" className="hover:text-[#2E62FF]">
               Features
             </Link>
           </nav>

@@ -7,7 +7,7 @@ interface Props {
   feature: Feature;
 }
 
-export default function FeatureCard({ feature }: Props) {
+export default function LandingFeatureCard({ feature }: Props) {
   const Icon = feature.icon;
 
   return (
