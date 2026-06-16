@@ -1,5 +1,3 @@
-'use client';
-
 import * as React from 'react';
 import Link from 'next/link';
 
@@ -11,12 +9,22 @@ import {
 } from '@/components/ui/sidebar';
 
 import { Pencil } from 'lucide-react';
-
+import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { auth } from '@/lib/auth';
 import { data } from '@/data/sidebar-data';
 import { Logo } from './shared/shared-logo';
 import { Button } from './ui/button';
+import { LogoutButton } from './authentication/logout-button';
 
-export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
+export async function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
+  const session = await auth.api.getSession({
+    headers: await headers(),
+  });
+
+  if (!session) {
+    redirect('/login');
+  }
   return (
     <Sidebar
       className="
@@ -142,7 +150,7 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
       </SidebarContent>
 
       {/* Footer */}
-      <SidebarFooter className="border-t border-white/10 p-4">
+      <SidebarFooter className="border-t flex flex-col border-white/10 p-4">
         <div
           className="
             flex
@@ -166,11 +174,12 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
           </div>
 
           <div>
-            <p className="font-medium text-white">Shahbaz</p>
+            <p className="font-medium text-white">{session?.user.name}</p>
 
             <p className="text-sm text-zinc-500">Pro Plan</p>
           </div>
         </div>
+        <LogoutButton />
       </SidebarFooter>
     </Sidebar>
   );

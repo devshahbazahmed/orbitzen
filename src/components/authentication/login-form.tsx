@@ -110,7 +110,17 @@ export function LoginForm({
             </CardHeader>
             <CardContent className="space-y-6">
               <form className="space-y-6" onSubmit={(e) => handleSubmit(e)}>
-                <Button variant="outline" type="button" className="w-full py-6">
+                <Button
+                  variant="outline"
+                  type="button"
+                  className="w-full py-6"
+                  onClick={async () => {
+                    await authClient.signIn.social({
+                      provider: 'google',
+                      callbackURL: '/dashboard',
+                    });
+                  }}
+                >
                   <Image
                     src="/google.svg"
                     alt="Google"

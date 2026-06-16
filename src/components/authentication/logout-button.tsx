@@ -13,5 +13,12 @@ export function LogoutButton() {
     router.replace('/login');
   }
 
-  return <Button onClick={logout}>Logout</Button>;
+  return (
+    <Button
+      onClick={logout}
+      className="bg-pink-800 text-white hover:bg-pink-700"
+    >
+      Logout
+    </Button>
+  );
 }

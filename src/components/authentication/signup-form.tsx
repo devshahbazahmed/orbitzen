@@ -97,7 +97,17 @@ export function SignupForm({ ...props }: React.ComponentProps<typeof Card>) {
           </CardHeader>
           <CardContent className="space-y-6">
             <form className="space-y-6" onSubmit={(e) => handleSubmit(e)}>
-              <Button type="button" variant="outline" className="w-full py-6">
+              <Button
+                type="button"
+                variant="outline"
+                className="w-full py-6"
+                onClick={async () => {
+                  await authClient.signIn.social({
+                    provider: 'google',
+                    callbackURL: '/dashboard',
+                  });
+                }}
+              >
                 <Image src="/google.svg" alt="Google" width={16} height={16} />
                 Continue with Google
               </Button>
