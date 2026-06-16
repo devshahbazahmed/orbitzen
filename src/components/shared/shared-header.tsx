@@ -10,16 +10,16 @@ export default function Header() {
           <Logo />
 
           <nav className="hidden md:flex items-center gap-8 text-sm text-zinc-400">
-            <Link href="/" className="hover:text-white">
+            <Link href="/" className="hover:text-[#2E62FF]">
               Product
             </Link>
-            <Link href="/pricing" className="hover:text-white">
+            <Link href="/pricing" className="hover:text-[#2E62FF]">
               Pricing
             </Link>
-            <Link href="#" className="hover:text-white">
+            <Link href="#" className="hover:text-[#2E62FF]">
               Enterprise
             </Link>
-            <Link href="#" className="hover:text-white">
+            <Link href="#" className="hover:text-[#2E62FF]">
               Features
             </Link>
           </nav>

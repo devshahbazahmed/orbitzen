@@ -3,6 +3,7 @@ import PricingSection from '@/components/pricing/pricing-section';
 import ComparisonTable from '@/components/pricing/comparison-table';
 import Header from '@/components/shared/shared-header';
 import Footer from '@/components/shared/shared-footer';
+import FadeIn from '@/components/shared/animations/fade-in';
 
 export default function PricingPage() {
   return (
@@ -10,14 +11,22 @@ export default function PricingPage() {
       <Header />
 
       <div className="container mx-auto px-6">
-        <PricingHero />
+        <FadeIn>
+          <PricingHero />
+        </FadeIn>
 
-        <PricingSection />
+        <FadeIn>
+          <PricingSection />
+        </FadeIn>
 
-        <ComparisonTable />
+        <FadeIn>
+          <ComparisonTable />
+        </FadeIn>
       </div>
 
-      <Footer />
+      <FadeIn>
+        <Footer />
+      </FadeIn>
     </main>
   );
 }
