@@ -16,7 +16,7 @@ export default function Header() {
             <Link href="/pricing" className="hover:text-[#2E62FF]">
               Pricing
             </Link>
-            <Link href="#" className="hover:text-[#2E62FF]">
+            <Link href="/enterprise" className="hover:text-[#2E62FF]">
               Enterprise
             </Link>
             <Link href="/features" className="hover:text-[#2E62FF]">
